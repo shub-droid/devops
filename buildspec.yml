@@ -1,5 +1,7 @@
 version: 0.2
 
+runtimes:
+  nodejs: 20
 phases:
   install:
     commands:
