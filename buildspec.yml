@@ -1,8 +1,9 @@
 version: 0.2
 
-runtimes:
-  nodejs: 20
+
 phases:
+runtime-versions:
+      nodejs: 20 
   install:
     commands:
       - echo "Installing Node.js dependencies..."
