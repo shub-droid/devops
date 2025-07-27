@@ -2,12 +2,15 @@ version: 0.2
 
 
 phases:
-  runtime-versions:
-    nodejs: 20 
   install:
+    # --- YEH WALA SECTION CHANGE HOGA ---
+    # runtime-versions 'install' phase ka direct child hai, aur commands bhi.
+    runtime-versions:
+      nodejs: 20 # Node.js version 20 (LTS).
     commands:
       - echo "Installing Node.js dependencies..."
       - npm install
+    # --- END SECTION ---
 
   build:
     commands:
