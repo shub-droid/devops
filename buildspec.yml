@@ -1,12 +1,13 @@
 version: 0.2
 
-
 phases:
   install:
     # --- YEH WALA SECTION CHANGE HOGA ---
-    # runtime-versions 'install' phase ka direct child hai, aur commands bhi.
+    # 'install:' se 2 spaces extra indent
     runtime-versions:
+      # 'runtime-versions:' se 2 spaces extra indent
       nodejs: 20 # Node.js version 20 (LTS).
+    # 'install:' se 2 spaces extra indent (same level as runtime-versions:)
     commands:
       - echo "Installing Node.js dependencies..."
       - npm install
@@ -15,16 +16,16 @@ phases:
   build:
     commands:
       - echo "Building React/Vite application for production..."
-      - npm run build 
-      - echo "Build completed."
+      - npm run build
+      - echo "Build completed." # A good practice to confirm build is finished
 
   post_build:
     commands:
       - echo "Verifying build output..."
-      - ls -al dist 
+      - ls -al dist
 
 artifacts:
   files:
-    - '**/*' 
+    - '**/*'
   base-directory: 'dist'
-  discard-paths: yes 
+  discard-paths: yes
